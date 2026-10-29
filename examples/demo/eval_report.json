@@ -1,0 +1,17 @@
+{
+  "total_expected": 7,
+  "matched": 7,
+  "recall": 1.0,
+  "precision": 1.0,
+  "operation_accuracy": 1.0,
+  "posting_accuracy": 1.0,
+  "field_accuracy": {
+    "operation": 1.0,
+    "posting_type": 1.0,
+    "reference_no": 1.0,
+    "currency": 1.0,
+    "document_date": 1.0
+  },
+  "mismatches": [],
+  "unexpected": []
+}

@@ -1,0 +1,372 @@
+[
+  {
+    "operation": "UPDATE",
+    "document_info": {
+      "document_type": "Debit Note",
+      "reference_no": "DC-108478",
+      "document_date": "2026-10-24"
+    },
+    "transaction_party": {
+      "issuer": "NEPTUNE SHIPPING LIMITED",
+      "recipient": null
+    },
+    "charge_details": {
+      "charge_item": "Handling Charge",
+      "amount": 65.0,
+      "currency": "USD",
+      "payment_term": "COD"
+    },
+    "financial_attributes": {
+      "accounting_entity": "NEPTUNE SHIPPING LIMITED",
+      "posting_type": "AR"
+    },
+    "audit_trail": {
+      "ai_reasoning": [
+        "从 PDF 示例账单2.pdf（pdf，line 26 (section header line 25)）解析出费用：HANDLING CHARGE，来源 pdf_text_layer",
+        "记账主体『NEPTUNE SHIPPING LIMITED』与签发方『NEPTUNE SHIPPING LIMITED』相似度 1.00，与接收方『未知』相似度 0.00",
+        "我方是单据的签发方（对外开票/收费），基础方向判定为 AR",
+        "最终过账方向：AR",
+        "按单据编号 DC-108478 + 费用名称 Handling Charge 匹配到台账 BILL-1001",
+        "同编号同费用名共有 2 条历史明细，按金额最接近原则选中（差额 25.00）",
+        "金额存在差异：台账 40.0 / 单据 65.0",
+        "匹配到已有账单且输入材料明确变更了字段，按增量更新处理",
+        "字段 amount 由 40.0 更新为 65.0（输入材料金额与台账不一致）",
+        "其他字段未被输入材料明确要求修改，保留台账原值"
+      ],
+      "source": {
+        "file": "PDF 示例账单2.pdf",
+        "role": "primary",
+        "kind": "pdf",
+        "locator": "line 26 (section header line 25)",
+        "ocr_source": "pdf_text_layer",
+        "extractor": "rules",
+        "document_sha256": "70dcc3e7d07a0012fc642af256371f25438eed2c7bbe25442b7ffbd193fd34ba"
+      },
+      "confidence": 0.82,
+      "warnings": [
+        "交易双方信息不完整"
+      ],
+      "matched_bill_id": "BILL-1001",
+      "match_rule": "单据编号+费用名称",
+      "field_changes": [
+        {
+          "field": "amount",
+          "old": 40.0,
+          "new": 65.0,
+          "reason": "输入材料金额与台账不一致",
+          "kind": "overwrite"
+        }
+      ]
+    }
+  },
+  {
+    "operation": "CREATE",
+    "document_info": {
+      "document_type": "Debit Note",
+      "reference_no": "DC-108478",
+      "document_date": "2026-10-24"
+    },
+    "transaction_party": {
+      "issuer": "NEPTUNE SHIPPING LIMITED",
+      "recipient": null
+    },
+    "charge_details": {
+      "charge_item": "Detention Charge",
+      "amount": 1310.4,
+      "currency": "USD",
+      "payment_term": "COD"
+    },
+    "financial_attributes": {
+      "accounting_entity": "NEPTUNE SHIPPING LIMITED",
+      "posting_type": "AR"
+    },
+    "audit_trail": {
+      "ai_reasoning": [
+        "从 PDF 示例账单2.pdf（pdf，line 27 (section header line 25)）解析出费用：ADD'L DETENTION FREE TIME CHARGE，来源 pdf_text_layer",
+        "费用名称标准化：'ADD'L DETENTION FREE TIME CHARGE' → 'Detention Charge'",
+        "记账主体『NEPTUNE SHIPPING LIMITED』与签发方『NEPTUNE SHIPPING LIMITED』相似度 1.00，与接收方『未知』相似度 0.00",
+        "我方是单据的签发方（对外开票/收费），基础方向判定为 AR",
+        "最终过账方向：AR",
+        "四个匹配规则均未命中，判定为新账单",
+        "未匹配到已有账单，按新增处理"
+      ],
+      "source": {
+        "file": "PDF 示例账单2.pdf",
+        "role": "primary",
+        "kind": "pdf",
+        "locator": "line 27 (section header line 25)",
+        "ocr_source": "pdf_text_layer",
+        "extractor": "rules",
+        "document_sha256": "70dcc3e7d07a0012fc642af256371f25438eed2c7bbe25442b7ffbd193fd34ba"
+      },
+      "confidence": 0.8,
+      "warnings": [
+        "交易双方信息不完整"
+      ],
+      "matched_bill_id": null,
+      "match_rule": null,
+      "field_changes": []
+    }
+  },
+  {
+    "operation": "NO_CHANGE",
+    "document_info": {
+      "document_type": "Debit Note",
+      "reference_no": "DC-108478",
+      "document_date": "2026-10-24"
+    },
+    "transaction_party": {
+      "issuer": "NEPTUNE SHIPPING LIMITED",
+      "recipient": null
+    },
+    "charge_details": {
+      "charge_item": "Handling Charge",
+      "amount": 35.0,
+      "currency": "USD",
+      "payment_term": "COD"
+    },
+    "financial_attributes": {
+      "accounting_entity": "NEPTUNE SHIPPING LIMITED",
+      "posting_type": "AR"
+    },
+    "audit_trail": {
+      "ai_reasoning": [
+        "从 PDF 示例账单2.pdf（pdf，line 28 (section header line 25)）解析出费用：HANDLING CHARGE，来源 pdf_text_layer",
+        "记账主体『NEPTUNE SHIPPING LIMITED』与签发方『NEPTUNE SHIPPING LIMITED』相似度 1.00，与接收方『未知』相似度 0.00",
+        "我方是单据的签发方（对外开票/收费），基础方向判定为 AR",
+        "最终过账方向：AR",
+        "按单据编号 DC-108478 + 费用名称 Handling Charge 匹配到台账 BILL-1002",
+        "同编号同费用名共有 2 条历史明细，按金额最接近原则选中（差额 0.00）",
+        "匹配到已有账单且所有字段一致，无需变更",
+        "台账字段与输入材料一致，未做任何覆盖"
+      ],
+      "source": {
+        "file": "PDF 示例账单2.pdf",
+        "role": "primary",
+        "kind": "pdf",
+        "locator": "line 28 (section header line 25)",
+        "ocr_source": "pdf_text_layer",
+        "extractor": "rules",
+        "document_sha256": "70dcc3e7d07a0012fc642af256371f25438eed2c7bbe25442b7ffbd193fd34ba"
+      },
+      "confidence": 0.82,
+      "warnings": [
+        "交易双方信息不完整"
+      ],
+      "matched_bill_id": "BILL-1002",
+      "match_rule": "单据编号+费用名称",
+      "field_changes": []
+    }
+  },
+  {
+    "operation": "NO_CHANGE",
+    "document_info": {
+      "document_type": "Arrival Notice",
+      "reference_no": "CMDUCHN4053601",
+      "document_date": null
+    },
+    "transaction_party": {
+      "issuer": "NEPTUNE SHIPPING LIMITED",
+      "recipient": "CIMC WETRANS INTL LOG CO LTD"
+    },
+    "charge_details": {
+      "charge_item": "On Carriage Charge",
+      "amount": 245.0,
+      "currency": "USD",
+      "payment_term": null
+    },
+    "financial_attributes": {
+      "accounting_entity": "NEPTUNE SHIPPING LIMITED",
+      "posting_type": "AR"
+    },
+    "audit_trail": {
+      "ai_reasoning": [
+        "从 PDF示例账单1.pdf（pdf，line 14 (section header line 13)）解析出费用：On Carriage Additional，来源 pdf_text_layer",
+        "费用名称标准化：'On Carriage Additional' → 'On Carriage Charge'",
+        "记账主体『NEPTUNE SHIPPING LIMITED』与签发方『NEPTUNE SHIPPING LIMITED』相似度 1.00，与接收方『CIMC WETRANS INTL LOG CO LTD』相似度 0.10",
+        "我方是单据的签发方（对外开票/收费），基础方向判定为 AR",
+        "最终过账方向：AR",
+        "按提单号 CMDUCHN4053601 + 费用名称 + 币种匹配到台账 BILL-2002",
+        "匹配到已有账单，金额/币种/双方一致；仅补全台账空字段，不构成更新",
+        "台账字段 reference_no 为空，按输入材料补全为 CMDUCHN4053601（补全，不构成覆盖）",
+        "其他字段未被输入材料明确要求修改，保留台账原值"
+      ],
+      "source": {
+        "file": "PDF示例账单1.pdf",
+        "role": "primary",
+        "kind": "pdf",
+        "locator": "line 14 (section header line 13)",
+        "ocr_source": "pdf_text_layer",
+        "extractor": "rules",
+        "document_sha256": "7f0681695a278ea49dc50090bb1bc476b3c73bbc4a3d4862bc31a013d2ad045d"
+      },
+      "confidence": 0.91,
+      "warnings": [],
+      "matched_bill_id": "BILL-2002",
+      "match_rule": "提单号+费用名称+币种",
+      "field_changes": [
+        {
+          "field": "reference_no",
+          "old": null,
+          "new": "CMDUCHN4053601",
+          "reason": "台账编号为空",
+          "kind": "enrich"
+        }
+      ]
+    }
+  },
+  {
+    "operation": "PENDING_REVIEW",
+    "document_info": {
+      "document_type": "Invoice",
+      "reference_no": "ORFR1618731",
+      "document_date": "2025-10-03"
+    },
+    "transaction_party": {
+      "issuer": "ZIM AMERICAN INTEGRATED SHIPPING SERVICES CO., LLC",
+      "recipient": "ALL AMERICA FORWARDING, INC"
+    },
+    "charge_details": {
+      "charge_item": "Wharfage Administration Fee",
+      "amount": 5.0,
+      "currency": "USD",
+      "payment_term": null
+    },
+    "financial_attributes": {
+      "accounting_entity": "NEPTUNE SHIPPING LIMITED",
+      "posting_type": null
+    },
+    "audit_trail": {
+      "ai_reasoning": [
+        "从 图片示例.png（image，line 35 (section header line 34)）解析出费用：WHARFAGE ADMINISTRATION FEE，来源 replay_cache",
+        "记账主体『NEPTUNE SHIPPING LIMITED』与签发方『ZIM AMERICAN INTEGRATED SHIPPING SERVICES CO., LLC』相似度 0.18，与接收方『ALL AMERICA FORWARDING, INC』相似度 0.07",
+        "无法从单据确定我方角色，按规范不允许仅凭单据类型猜测，转人工复核",
+        "四个匹配规则均未命中，判定为新账单",
+        "无法结合记账主体判断应收应付，转人工复核"
+      ],
+      "source": {
+        "file": "图片示例.png",
+        "role": "primary",
+        "kind": "image",
+        "locator": "line 35 (section header line 34)",
+        "ocr_source": "replay_cache",
+        "extractor": "rules",
+        "document_sha256": "f3ca6432d5597b7254eb805cb02e97e5633a681658fae4967daaa534e349fd93"
+      },
+      "confidence": 0.82,
+      "warnings": [],
+      "matched_bill_id": null,
+      "match_rule": null,
+      "field_changes": []
+    }
+  },
+  {
+    "operation": "PENDING_REVIEW",
+    "document_info": {
+      "document_type": "Invoice",
+      "reference_no": "ORFR1618731",
+      "document_date": "2025-10-03"
+    },
+    "transaction_party": {
+      "issuer": "ZIM AMERICAN INTEGRATED SHIPPING SERVICES CO., LLC",
+      "recipient": "ALL AMERICA FORWARDING, INC"
+    },
+    "charge_details": {
+      "charge_item": "Wharfage",
+      "amount": 21.9,
+      "currency": "USD",
+      "payment_term": null
+    },
+    "financial_attributes": {
+      "accounting_entity": "NEPTUNE SHIPPING LIMITED",
+      "posting_type": null
+    },
+    "audit_trail": {
+      "ai_reasoning": [
+        "从 图片示例.png（image，line 36 (section header line 34)）解析出费用：WHARFAGE，来源 replay_cache",
+        "记账主体『NEPTUNE SHIPPING LIMITED』与签发方『ZIM AMERICAN INTEGRATED SHIPPING SERVICES CO., LLC』相似度 0.18，与接收方『ALL AMERICA FORWARDING, INC』相似度 0.07",
+        "无法从单据确定我方角色，按规范不允许仅凭单据类型猜测，转人工复核",
+        "四个匹配规则均未命中，判定为新账单",
+        "无法结合记账主体判断应收应付，转人工复核"
+      ],
+      "source": {
+        "file": "图片示例.png",
+        "role": "primary",
+        "kind": "image",
+        "locator": "line 36 (section header line 34)",
+        "ocr_source": "replay_cache",
+        "extractor": "rules",
+        "document_sha256": "f3ca6432d5597b7254eb805cb02e97e5633a681658fae4967daaa534e349fd93"
+      },
+      "confidence": 0.82,
+      "warnings": [],
+      "matched_bill_id": null,
+      "match_rule": null,
+      "field_changes": []
+    }
+  },
+  {
+    "operation": "PENDING_REVIEW",
+    "document_info": {
+      "document_type": "Pre-Alert",
+      "reference_no": "OOLU4055331281",
+      "document_date": "2026-10-20"
+    },
+    "transaction_party": {
+      "issuer": "luka@pltplt.com",
+      "recipient": "li"
+    },
+    "charge_details": {
+      "charge_item": "Handling Charge",
+      "amount": 50.0,
+      "currency": "USD",
+      "payment_term": "PP"
+    },
+    "financial_attributes": {
+      "accounting_entity": "NEPTUNE SHIPPING LIMITED",
+      "posting_type": null
+    },
+    "audit_trail": {
+      "ai_reasoning": [
+        "从 深圳容宇 PRE-ALERT SSZSE26093128 VASINGER LLC 1x40HQ  CNTR NO._ TIIU8975975   MBL NO._ OOLU4055331281  Arrived time 2026-10-30.eml（eml，line 14）解析出费用：H/C",
+        "费用名称标准化：'H/C' → 'Handling Charge'",
+        "记账主体『NEPTUNE SHIPPING LIMITED』与签发方『luka@pltplt.com』相似度 0.17，与接收方『li』相似度 0.00",
+        "无法从单据确定我方角色，按规范不允许仅凭单据类型猜测，转人工复核",
+        "按提单号 OOLU4055331281 + 费用名称 + 币种匹配到台账 BILL-2001",
+        "无法结合记账主体判断应收应付，转人工复核",
+        "字段 recipient 由 PLTPLT 更新为 li（输入材料接收方与台账不一致）",
+        "台账字段 reference_no 为空，按输入材料补全为 OOLU4055331281（补全，不构成覆盖）",
+        "若人工确认无误，将按上述变更写回台账"
+      ],
+      "source": {
+        "file": "深圳容宇 PRE-ALERT SSZSE26093128 VASINGER LLC 1x40HQ  CNTR NO._ TIIU8975975   MBL NO._ OOLU4055331281  Arrived time 2026-10-30.eml",
+        "role": "primary",
+        "kind": "eml",
+        "locator": "line 14",
+        "ocr_source": null,
+        "extractor": "rules",
+        "document_sha256": "fad3298ec8fd3da0e092dfbed0a313be28170073f1e01125195a5dfe9b886e58"
+      },
+      "confidence": 0.81,
+      "warnings": [],
+      "matched_bill_id": "BILL-2001",
+      "match_rule": "提单号+费用名称+币种",
+      "field_changes": [
+        {
+          "field": "recipient",
+          "old": "PLTPLT",
+          "new": "li",
+          "reason": "输入材料接收方与台账不一致",
+          "kind": "overwrite"
+        },
+        {
+          "field": "reference_no",
+          "old": null,
+          "new": "OOLU4055331281",
+          "reason": "台账编号为空",
+          "kind": "enrich"
+        }
+      ]
+    }
+  }
+]

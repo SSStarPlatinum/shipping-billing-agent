@@ -1,0 +1,86 @@
+{
+  "description": "样例数据的金标准：python -m shipping_billing eval 会逐条比对。",
+  "entity": "NEPTUNE SHIPPING LIMITED",
+  "cases": [
+    {
+      "file": "PDF示例账单1.pdf",
+      "document_type": "Arrival Notice",
+      "reference_no": "CMDUCHN4053601",
+      "charge_item": "On Carriage Charge",
+      "amount": 245.0,
+      "currency": "USD",
+      "operation": "NO_CHANGE",
+      "posting_type": "AR",
+      "note": "匹配规则 2（提单号+费用名称+币种）时命中台账，金额一致 → 无需变更"
+    },
+    {
+      "file": "PDF 示例账单2.pdf",
+      "document_type": "Debit Note",
+      "reference_no": "DC-108478",
+      "document_date": "2026-10-24",
+      "charge_item": "Handling Charge",
+      "amount": 65.0,
+      "currency": "USD",
+      "operation": "UPDATE",
+      "posting_type": "AR",
+      "note": "匹配规则 1 命中 BILL-1001，金额 40.00 → 65.00，其余字段继承"
+    },
+    {
+      "file": "PDF 示例账单2.pdf",
+      "document_type": "Debit Note",
+      "reference_no": "DC-108478",
+      "document_date": "2026-10-24",
+      "charge_item": "Detention Charge",
+      "amount": 1310.4,
+      "currency": "USD",
+      "operation": "CREATE",
+      "posting_type": "AR",
+      "note": "台账无此费用，按新增处理"
+    },
+    {
+      "file": "PDF 示例账单2.pdf",
+      "document_type": "Debit Note",
+      "reference_no": "DC-108478",
+      "document_date": "2026-10-24",
+      "charge_item": "Handling Charge",
+      "amount": 35.0,
+      "currency": "USD",
+      "operation": "NO_CHANGE",
+      "posting_type": "AR",
+      "note": "同名费用第二条，按金额精确命中 BILL-1002"
+    },
+    {
+      "file": "图片示例.png",
+      "document_type": "Invoice",
+      "reference_no": "ORFR1618731",
+      "document_date": "2025-10-03",
+      "charge_item": "Wharfage Administration Fee",
+      "amount": 5.0,
+      "currency": "USD",
+      "operation": "PENDING_REVIEW",
+      "note": "ZIM 发票的交易双方均不是当前记账主体，按规则不得仅凭单据类型判断 AR/AP → 转人工"
+    },
+    {
+      "file": "图片示例.png",
+      "document_type": "Invoice",
+      "reference_no": "ORFR1618731",
+      "document_date": "2025-10-03",
+      "charge_item": "Wharfage",
+      "amount": 21.9,
+      "currency": "USD",
+      "operation": "PENDING_REVIEW",
+      "note": "同上"
+    },
+    {
+      "file": "深圳容宇 PRE-ALERT SSZSE26093128 VASINGER LLC 1x40HQ  CNTR NO._ TIIU8975975   MBL NO._ OOLU4055331281  Arrived time 2026-10-30.eml",
+      "document_type": "Pre-Alert",
+      "reference_no": "OOLU4055331281",
+      "document_date": "2026-10-20",
+      "charge_item": "Handling Charge",
+      "amount": 50.0,
+      "currency": "USD",
+      "operation": "PENDING_REVIEW",
+      "note": "内部 PRE-ALERT 邮件，双方均为邮箱地址，无法与记账主体匹配 → 转人工；但已按提单号匹配到 BILL-2001"
+    }
+  ]
+}

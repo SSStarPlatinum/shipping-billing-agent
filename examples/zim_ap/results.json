@@ -1,0 +1,114 @@
+[
+  {
+    "operation": "NO_CHANGE",
+    "document_info": {
+      "document_type": "Invoice",
+      "reference_no": "ORFR1618731",
+      "document_date": "2025-10-03"
+    },
+    "transaction_party": {
+      "issuer": "ZIM AMERICAN INTEGRATED SHIPPING SERVICES CO., LLC",
+      "recipient": "ALL AMERICA FORWARDING, INC"
+    },
+    "charge_details": {
+      "charge_item": "Wharfage Administration Fee",
+      "amount": 5.0,
+      "currency": "USD",
+      "payment_term": null
+    },
+    "financial_attributes": {
+      "accounting_entity": "ALL AMERICA FORWARDING, INC.",
+      "posting_type": "AP"
+    },
+    "audit_trail": {
+      "ai_reasoning": [
+        "从 图片示例.png（image，line 35 (section header line 34)）解析出费用：WHARFAGE ADMINISTRATION FEE，来源 replay_cache",
+        "记账主体『ALL AMERICA FORWARDING, INC.』与签发方『ZIM AMERICAN INTEGRATED SHIPPING SERVICES CO., LLC』相似度 0.40，与接收方『ALL AMERICA FORWARDING, INC』相似度 1.00",
+        "我方是单据的接收方（被开票/被收费），基础方向判定为 AP",
+        "最终过账方向：AP",
+        "按订舱号 ZIMUNGB1312144 匹配到台账 BILL-3001",
+        "匹配到已有账单，金额/币种/双方一致；仅补全台账空字段，不构成更新",
+        "台账字段 reference_no 为空，按输入材料补全为 ORFR1618731（补全，不构成覆盖）",
+        "其他字段未被输入材料明确要求修改，保留台账原值"
+      ],
+      "source": {
+        "file": "图片示例.png",
+        "role": "primary",
+        "kind": "image",
+        "locator": "line 35 (section header line 34)",
+        "ocr_source": "replay_cache",
+        "extractor": "rules",
+        "document_sha256": "f3ca6432d5597b7254eb805cb02e97e5633a681658fae4967daaa534e349fd93"
+      },
+      "confidence": 0.96,
+      "warnings": [],
+      "matched_bill_id": "BILL-3001",
+      "match_rule": "订舱号+费用名称+币种",
+      "field_changes": [
+        {
+          "field": "reference_no",
+          "old": null,
+          "new": "ORFR1618731",
+          "reason": "台账编号为空",
+          "kind": "enrich"
+        }
+      ]
+    }
+  },
+  {
+    "operation": "NO_CHANGE",
+    "document_info": {
+      "document_type": "Invoice",
+      "reference_no": "ORFR1618731",
+      "document_date": "2025-10-03"
+    },
+    "transaction_party": {
+      "issuer": "ZIM AMERICAN INTEGRATED SHIPPING SERVICES CO., LLC",
+      "recipient": "ALL AMERICA FORWARDING, INC"
+    },
+    "charge_details": {
+      "charge_item": "Wharfage",
+      "amount": 21.9,
+      "currency": "USD",
+      "payment_term": null
+    },
+    "financial_attributes": {
+      "accounting_entity": "ALL AMERICA FORWARDING, INC.",
+      "posting_type": "AP"
+    },
+    "audit_trail": {
+      "ai_reasoning": [
+        "从 图片示例.png（image，line 36 (section header line 34)）解析出费用：WHARFAGE，来源 replay_cache",
+        "记账主体『ALL AMERICA FORWARDING, INC.』与签发方『ZIM AMERICAN INTEGRATED SHIPPING SERVICES CO., LLC』相似度 0.40，与接收方『ALL AMERICA FORWARDING, INC』相似度 1.00",
+        "我方是单据的接收方（被开票/被收费），基础方向判定为 AP",
+        "最终过账方向：AP",
+        "按箱号 JKU0450463 + 交易双方 + 金额匹配到台账 BILL-3002",
+        "匹配到已有账单，金额/币种/双方一致；仅补全台账空字段，不构成更新",
+        "台账字段 reference_no 为空，按输入材料补全为 ORFR1618731（补全，不构成覆盖）",
+        "其他字段未被输入材料明确要求修改，保留台账原值"
+      ],
+      "source": {
+        "file": "图片示例.png",
+        "role": "primary",
+        "kind": "image",
+        "locator": "line 36 (section header line 34)",
+        "ocr_source": "replay_cache",
+        "extractor": "rules",
+        "document_sha256": "f3ca6432d5597b7254eb805cb02e97e5633a681658fae4967daaa534e349fd93"
+      },
+      "confidence": 0.96,
+      "warnings": [],
+      "matched_bill_id": "BILL-3002",
+      "match_rule": "箱号+交易双方+日期+金额",
+      "field_changes": [
+        {
+          "field": "reference_no",
+          "old": null,
+          "new": "ORFR1618731",
+          "reason": "台账编号为空",
+          "kind": "enrich"
+        }
+      ]
+    }
+  }
+]

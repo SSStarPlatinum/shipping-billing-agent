@@ -1,0 +1,13 @@
+﻿# 统一换行，避免 Windows/Linux 检出差异
+* text=auto eol=lf
+
+# 二进制文件绝不做换行转换（OCR 缓存按文件 sha256 命名，字节必须完全一致）
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.xlsx binary
+*.docx binary
+*.eml binary

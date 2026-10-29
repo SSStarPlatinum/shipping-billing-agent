@@ -1,0 +1,37 @@
+{
+  "run_id": "20261029-173220-6e3848",
+  "started_at": "2026-10-29T17:32:20+0800",
+  "finished_at": "2026-10-29T17:32:20+0800",
+  "duration_s": 0.054,
+  "counters": {
+    "files_ok": 1,
+    "records": 2,
+    "documents": 1,
+    "op_NO_CHANGE": 2
+  },
+  "meta": {
+    "entity": "ALL AMERICA FORWARDING, INC.",
+    "ocr_mode": "auto",
+    "llm_enabled": false
+  },
+  "files": [
+    {
+      "file": "图片示例.png",
+      "kind": "image",
+      "status": "ok",
+      "duration_ms": 52,
+      "documents": 1,
+      "records": 2,
+      "operations": {
+        "NO_CHANGE": 2
+      },
+      "warnings": [
+        "图片宽度仅 598px，OCR 准确率可能受影响",
+        "面试环境无法为本地文件提供 OCR 服务可下载的公网地址，此处为按 OCR 网关返回结构保存的离线回放样本（正文由该图片人工转录），仅用于离线演示与回归测试；配置 --ocr-public-base-url 后即走真实 API。",
+        "OCR API 不可用，使用本地回放结果"
+      ],
+      "error": null,
+      "ocr_source": "replay_cache"
+    }
+  ]
+}

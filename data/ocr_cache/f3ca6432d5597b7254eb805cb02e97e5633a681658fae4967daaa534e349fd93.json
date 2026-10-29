@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "source_file": "图片示例.png",
+    "sha256": "f3ca6432d5597b7254eb805cb02e97e5633a681658fae4967daaa534e349fd93",
+    "ocr_source": "replay_cache",
+    "confidence": 0.93,
+    "cached_at": "2026-10-28T10:12:00+0800",
+    "endpoint": "https://gateway.pltplt.com/ai/process",
+    "task": "orderChange",
+    "fixture": true,
+    "note": "面试环境无法为本地文件提供 OCR 服务可下载的公网地址，此处为按 OCR 网关返回结构保存的离线回放样本（正文由该图片人工转录），仅用于离线演示与回归测试；配置 --ocr-public-base-url 后即走真实 API。"
+  },
+  "text": "INVOICE\nZIM AMERICAN INTEGRATED SHIPPING SERVICES CO., LLC\nAS AGENTS FOR ZIM INTEGRATED SHIPPING SERVICES LTD\n4425 Zim Way\nVirginia Beach\nVA 23462\nALL AMERICA FORWARDING, INC.\n6161 SAVOY DR. STE 1022\n90247 HOUSTON\nU.S.A.\nPayer: USIAHALLAM\nAll payments must be issued to:\nZim American Integrated Shipping Services Co., LLC\nAs Agents for Zim Integrated Shipping Services Ltd.\n4425 Zim Way\nVirginia Beach, Va 23462-3462\nUSA\nORIGINAL\nDEBIT INVOICE: ORFR1618731 USIAHALLAM Invoice date 10/03/2025 SAPATE,\nMSC ELODIE 10/09/2025\nRE: MSC ELODIE VOY 2/E\nArrived:\nFrom: NINGBO (ZJ)\nTo: PORT EVERGLADES (FL)\nBooking Number: ZIMUNGB1312144\nB/L: ZIMUNGB1312144\nPlace of payment: USORF\nYour ref: -\nPayment Due: PAY IMMEDIATELY\nPlace of receipt of goods:\nFinal destination:\n1 X 40 HC\nJKU0450463\nBase Rate Original Cur Amount R.O.E. Curr Amount\nWHARFAGE ADMINISTRATION FEE C 5.00 USD 5.00 1.0000 USD 5.00\nWHARFAGE *TT 2.85 USD 21.90 1.0000 USD 21.90\nUSD 26.90",
+  "tables": [
+    [
+      ["Base", "Rate", "Original Cur", "Amount", "R.O.E.", "Curr", "Amount"],
+      ["WHARFAGE ADMINISTRATION FEE", "C", "5.00", "USD", "5.00", "1.0000", "USD 5.00"],
+      ["WHARFAGE", "*TT", "2.85", "USD", "21.90", "1.0000", "USD 21.90"]
+    ]
+  ],
+  "confidence": 0.93,
+  "raw": {
+    "code": 0,
+    "message": "success",
+    "data": {
+      "task": "orderChange",
+      "pages": 1,
+      "text": "INVOICE ... (离线回放样本，正文见 text 字段)",
+      "confidence": 0.93
+    }
+  }
+}

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shipping-billing-agent"
+version = "1.0.0"
+description = "多格式文档解析的航运智能账单助手（AI Agent）：EML/PDF/图片/Excel/Word → 标准账单 JSON"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Candidate" }]
+keywords = ["langchain", "ai-agent", "shipping", "freight", "ocr", "billing"]
+dependencies = [
+    "langchain>=0.3,<2",
+    "langchain-core>=0.3",
+    "langchain-openai>=0.2",
+    "pydantic>=2.5",
+    "requests>=2.31",
+    "pypdf>=4.0",
+    "openpyxl>=3.1",
+    "python-docx>=1.1",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+xls = ["xlrd>=2.0"]
+
+[project.scripts]
+shipping-billing = "shipping_billing.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["shipping_billing*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
